@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# ./build str.txt abcdefghijklmnopqrstuvwxyz
+if [ $2 ]; then
+    set -xe
+fi
+
+clang -Wall -Wextra -Werror main.c -o main
+
+./main $1
